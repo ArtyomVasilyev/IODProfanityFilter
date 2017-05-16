@@ -31,4 +31,9 @@
  */
 + (NSString*)stringByFilteringString:(NSString*)string withReplacementString:(NSString*)replacementString;
 
+/**
+ Returns a string with charachters in offending words replaced by * except first and last characters (f.e. f**k)
+ */
++ (NSString*)stringByFilteringStringWithPartialReplacement:(NSString*)string;
+
 @end
