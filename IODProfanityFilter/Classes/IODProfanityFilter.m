@@ -61,6 +61,15 @@ static NSMutableSet *IODProfanityFilterWordSet;
         }
     }
     
+    if (result.count == 0)
+    {
+        if ([wordSet containsObject:[string lowercaseString]])
+        {
+            NSRange range = NSMakeRange(0, string.length);
+            [result addObject:[NSValue valueWithRange:range]];
+        }
+    }
+    
     return result;
 }
 
